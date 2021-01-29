@@ -36,3 +36,14 @@ In this feature i just did the same thing but in this case you can imagine a sto
     console.log(saleProducts)
     
 First we have all the items from the array 'products' then we made a new const called 'saleProducts' that receives the value wich at same time is a function that transform all the prices over 30 by the half, but in this case we have to pass all the parameters because the array will be all changed, thats why i have to return the 'product.name' and the 'price' again.
+
+<h2>filter()</h2>
+
+The 'filter()' function filter it can 5 parameters of an array, 'callback', 'element', 'index', 'array' and 'this arg'. Is only required one os this parameters, in this case i only used the 'element' parameter.
+
+    const randomNumbers = [36, 56, 29, 99];
+    const numbersBiggerthan37 = randomNumbers.filter(item => item > 37);
+
+    console.log(numbersBiggerthan37);
+    
+I created a array called 'randomNumbers' with some random numbers but the idea is to filter the numbers that you want from this array with your parameter, in this case i created another const that filter the numbers that are bigger than 37, in this process the new array is just reusing the elements from the 'randomNumbers' but the 'filter' is filtering the 'elements' that i want, in this case bigger than 37. The result in the console is like 'numbersBiggerthan37 = [56, 99 ]'
