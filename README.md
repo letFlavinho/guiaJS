@@ -47,3 +47,18 @@ The 'filter()' function filter it can 5 parameters of an array, 'callback', 'ele
     console.log(numbersBiggerthan37);
     
 I created a array called 'randomNumbers' with some random numbers but the idea is to filter the numbers that you want from this array with your parameter, in this case i created another const that filter the numbers that are bigger than 37, in this process the new array is just reusing the elements from the 'randomNumbers' but the 'filter' is filtering the 'elements' that i want, in this case bigger than 37. The result in the console is like 'numbersBiggerthan37 = [56, 99 ]'
+
+In a pratic way, we can use this function to guarantee if some members of your community are premium like in this example.
+
+        const users = [
+        { name: 'Ada Lovelace', premium: true },
+        { name: 'Grace Hopper', premium: false },
+        { name: 'Alan Turing', premium: true },
+        { name: 'Linus Torvalds', premium: false },
+        { name: 'Margaret Hamilton', premium: true }
+      ]
+
+    const premiumUser = users.filter(user => user.premium)
+    console.log(premiumUser)
+
+Here we have an array with the users list with a parameter that says if the user is premium or not, the 'filter' can see if is true, when the new const 'premiumUser' is created the 'filter' only filter the users that have a 'true' in the 'premium' parameter and it creates a new array only with members that have premium.
