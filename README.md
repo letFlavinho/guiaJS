@@ -18,4 +18,21 @@ Another example of the 'map()' function:
     const salePrices = prices.map(price => price / 2);
     console.log(salePrices)
     
-In this feature i just did the same thing but in this case you can imagine a store selling everything by half of the price, i create an array with all the prices, then i build new const with all the prices by the half. 
+In this feature i just did the same thing but in this case you can imagine a store selling everything by half of the price, i create an array with all the prices, then i build new const with all the prices by the half. In the next feature we'll see that you can apply the 'map()' to very usefull things in your web application.
+
+        const products = [
+        { name: 'Mouse Sem Fio', price: 30 },
+        { name: 'Pen Drive', price: 25 },
+        { name: 'Cartucho de Tinta', price: 50 },
+        { name: 'Suporte Ergonômico para Notebook', price: 23 },
+        { name: 'Repetidor de Sinal Wi-Fi', price: 44 }
+      ]
+    const saleProducts = products.map(product => {
+        if(product.price >= 30){
+            return { name: product.name, price: product.price / 2}
+        }
+        return product
+    })
+    console.log(saleProducts)
+    
+First we have all the items from the array 'products' then we made a new const called 'saleProducts' that receives the value wich at same time is a function that transform all the prices over 30 by the half, but in this case we have to pass all the parameters because the array will be all changed, thats why i have to return the 'product.name' and the 'price' again.
